@@ -214,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556564771038</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added code to get input and output what was inputed">
+      <created>1556735859486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556735859486</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -228,7 +235,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1160" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26627535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -239,14 +245,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994664" visible="true" weight="0.3291506" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.3291506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297975" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297975" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.3291506" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291506" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3291506" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3291506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
@@ -302,7 +308,8 @@
     <MESSAGE value="Added time to output" />
     <MESSAGE value="Made it so there is multiple threads available, so there is no blocking in when using two terminals" />
     <MESSAGE value="Refactored, to reduce the amount of statics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored, to reduce the amount of statics" />
+    <MESSAGE value="Added code to get input and output what was inputed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code to get input and output what was inputed" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
