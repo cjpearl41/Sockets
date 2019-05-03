@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3869459-a73c-4af8-9a48-b167c78954fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/protocals.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/ChatServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/ChatServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/serverWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/serverWorker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,24 +23,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="90">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#73#74#0" expanded="true" />
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/serverWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="990">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1657#1658#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,9 +86,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" />
         <option value="$PROJECT_DIR$/ChatServer/src/com/muc/protocals.txt" />
+        <option value="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" />
         <option value="$PROJECT_DIR$/ChatServer/src/com/muc/serverWorker.java" />
+        <option value="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" />
       </list>
     </option>
   </component>
@@ -139,6 +157,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.muc" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556735865854</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added another way to get the split line to work">
+      <created>1556905613867</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556905613867</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -264,14 +294,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.3291506" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893278" weight="0.3291506" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297975" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297975" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.3291506" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3291506" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010672" side_tool="true" weight="0.3291506" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3291506" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3291506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
@@ -328,7 +358,8 @@
     <MESSAGE value="Made it so there is multiple threads available, so there is no blocking in when using two terminals" />
     <MESSAGE value="Refactored, to reduce the amount of statics" />
     <MESSAGE value="Added code to get input and output what was inputed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code to get input and output what was inputed" />
+    <MESSAGE value="Added another way to get the split line to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added another way to get the split line to work" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -352,22 +383,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java">
+    <entry file="jar:///usr/lib/jvm/jdk-12/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="223">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="55" lean-forward="true" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#73#74#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/serverWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+        <state relative-caret-position="990">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
