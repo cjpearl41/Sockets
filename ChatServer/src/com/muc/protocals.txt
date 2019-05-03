@@ -1,0 +1,13 @@
+User & Server
+
+1. User-> Server
+    a. login/ logoff
+    b. status
+2. Server -> User
+    a. online/offline
+3. User -> User
+    a. direct messages
+    b. broadcast messages
+
+Commands:
+    loginin
