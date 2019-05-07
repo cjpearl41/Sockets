@@ -37,7 +37,8 @@ public class serverWorker extends Thread {
             String[] tokens = StringUtils.split(line);
             if(tokens != null && tokens.length > 0){
                 String cmd = tokens[0];
-                if("quit".equalsIgnoreCase(line)){
+                if("logoff".equals(cmd) || "quit".equalsIgnoreCase(line)){
+                    handleLogoff();
                     break;
                 }else if ("login".equalsIgnoreCase(cmd)) {
                     handleLogin(outputStream, tokens);
@@ -49,6 +50,17 @@ public class serverWorker extends Thread {
             }
         }
 
+        clientSocket.close();
+    }
+
+    private void handleLogoff() throws IOException {
+        List<serverWorker> workerList = server.getWorkerList();
+        String onlineMsg = "offline " + login  +"\n";
+        for(serverWorker worker: workerList){
+            if(!login.equals(worker.getLogin())) {
+                worker.send(onlineMsg);
+            }
+        }
         clientSocket.close();
     }
 
@@ -69,10 +81,22 @@ public class serverWorker extends Thread {
                 this.login = login;
                 System.out.println("User logged in successfully " + login);
 
-                String onlineMsg = "online " + login  +"\n";
+
+                //Send current user all either online login
                 List<serverWorker> workerList = server.getWorkerList();
                 for(serverWorker worker: workerList){
-                    worker.send(onlineMsg);
+                    if (worker.getLogin() != null) {
+                        if(!login.equals(worker.getLogin())) {
+                            String msg2 = "online " + worker.getLogin() + "\n";
+                            send(msg2);
+                        }
+                    }
+                }
+                String onlineMsg = "online " + login  +"\n";
+                for(serverWorker worker: workerList){
+                    if(!login.equals(worker.getLogin())) {
+                        worker.send(onlineMsg);
+                    }
                 }
             } else {
                 String msg = "Error login \n";
