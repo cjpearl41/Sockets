@@ -15,6 +15,7 @@ public class ChatClient {
     private BufferedReader bufferedIn;
 
     private ArrayList<UserStatusListener> userStatusListeners = new ArrayList<>();
+    private ArrayList<MessageListener> messageListeners = new ArrayList<>();
 
     public ChatClient(String serverName, int serverPort) {
         this.serverName = serverName;
@@ -34,6 +35,16 @@ public class ChatClient {
                 System.out.println("OFFLINE: " +login);
             }
         });
+        client.addMessageListener(new MessageListener() {
+            @Override
+            public void onMessage(String fromLogin, String msgBody) {
+
+                    System.out.println("You got a message from " + fromLogin + " ====>" + msgBody);
+
+            }
+        });
+
+
         if (!client.connect()){
             System.err.println("Connect Failed");
         }
@@ -41,11 +52,26 @@ public class ChatClient {
             System.out.println("Connect Successfully");
             if(client.login("guest","guest")){
                 System.out.println("Login Successful");
+
+                client.msg("jim", "Hello World");
             }else{
                 System.err.println("Login failed");
             }
 
+            //client.logoff();
+
         }
+    }
+
+    private void msg(String sendTo, String msgBody) throws IOException {
+        String cmd = "msg " + sendTo + " " + msgBody + "\n";
+        serverOut.write(cmd.getBytes());
+
+    }
+
+    private void logoff() throws IOException {
+        String cmd = "logoff\n";
+        serverOut.write(cmd.getBytes());
     }
 
     private boolean login(String login, String password) throws IOException {
@@ -84,6 +110,9 @@ public class ChatClient {
                         handleOnline(tokens);
                     } else if ("offline".equalsIgnoreCase(cmd)){
                         handleOffline(tokens);
+                    } else if("msg".equalsIgnoreCase(cmd)){
+                        String[] tokenMsg = StringUtils.split(line, null, 3);
+                        handleMessage(tokenMsg);
                     }
                 }
             }
@@ -94,6 +123,15 @@ public class ChatClient {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void handleMessage(String[] tokenMsg) {
+        String login = tokenMsg[1];
+        String msgBody = tokenMsg[2];
+
+        for(MessageListener listener: messageListeners){
+            listener.onMessage(login, msgBody);
         }
     }
 
@@ -130,5 +168,11 @@ public class ChatClient {
     }
     public void removeUserStatusListener(UserStatusListener listener){
         userStatusListeners.remove(listener);
+    }
+    public void addMessageListener(MessageListener listener){
+        messageListeners.add(listener);
+    }
+    public void removeMessageListener(MessageListener listener){
+        messageListeners.remove(listener);
     }
 }

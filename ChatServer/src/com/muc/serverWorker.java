@@ -36,7 +36,7 @@ public class serverWorker extends Thread {
         String line;
         while((line = reader.readLine()) != null){
             //String[] tokens = Line.split("");
-            String[] tokens = StringUtils.split(line);
+            String[] tokens = StringUtils.split(line, null, 3);
             if(tokens != null && tokens.length > 0){
                 String cmd = tokens[0];
                 if("logoff".equals(cmd) || "quit".equalsIgnoreCase(line)){
@@ -132,7 +132,7 @@ public class serverWorker extends Thread {
             String password = tokens[2];
 
             if((login.equals("guest") && password.equals("guest")) || (login.equals("jim") && password.equals("jim"))){
-                String msg = "Ok login \n";
+                String msg = "Ok login\n";
                     outputStream.write(msg.getBytes());
 
 
