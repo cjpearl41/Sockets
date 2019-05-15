@@ -158,11 +158,8 @@ public class serverWorker extends Thread {
                 }
             } else {
                 String msg = "Error login \n";
-                try {
-                    outputStream.write(msg.getBytes());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                outputStream.write(msg.getBytes());
+                System.err.println("Login failed for " + login);
             }
         }
     }
