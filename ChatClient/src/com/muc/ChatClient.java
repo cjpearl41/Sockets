@@ -6,6 +6,9 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * This allows for messaging
+ */
 public class ChatClient {
     private final int serverPort;
     private final String serverName;
@@ -149,6 +152,10 @@ public class ChatClient {
         }
     }
 
+    /**
+     * This connects people to the chat
+     * @return
+     */
     public boolean connect() {
         try {
             this.socket = new Socket(serverName, serverPort);
