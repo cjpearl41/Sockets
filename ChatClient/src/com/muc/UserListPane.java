@@ -6,13 +6,19 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
 
+/**
+ * This creates a GUI to show who is online
+ */
 public class UserListPane extends JPanel implements UserStatusListener {
     private final ChatClient client;
     private JList<String> userListUI;
     private DefaultListModel<String> userListModel;
 
 
-
+    /**
+     * This pane shows who is online to be able to message
+     * @param client
+     */
     public UserListPane(ChatClient client) {
         this.client = client;
         this.client.addUserStatusListener(this);

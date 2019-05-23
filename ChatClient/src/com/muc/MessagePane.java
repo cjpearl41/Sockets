@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/**
+ * This creates a GUI to message someone
+ */
 public class MessagePane extends JPanel implements MessageListener {
 
     private final ChatClient client;
@@ -15,7 +18,11 @@ public class MessagePane extends JPanel implements MessageListener {
     private JList<String> messageList = new JList<>(listModel);
     private JTextField inputField = new JTextField();
 
-
+    /**
+     * This pane allows for double-clicking on a name and being able to message them
+     * @param client
+     * @param login
+     */
     public MessagePane(ChatClient client, String login) {
         this.client = client;
         this.login = login;

@@ -6,6 +6,9 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This connects people to the chat
+ */
 public class Server extends Thread {
     private final int serverPort;
 
@@ -38,6 +41,10 @@ public class Server extends Thread {
         }
     }
 
+    /**
+     * This removes a person from the chat
+     * @param serverWorker
+     */
     public void removeWorker(serverWorker serverWorker) {
         workerList.remove(serverWorker);
     }

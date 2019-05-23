@@ -28,6 +28,13 @@ public class serverWorker extends Thread {
             e.printStackTrace();
         }
     }
+
+    /**
+     *
+     * This is used to take commands and use the correct methods for those functions
+     * @throws IOException
+     * @throws InterruptedException
+     */
     private void handleClientSocket() throws IOException, InterruptedException {
         InputStream inputStream = clientSocket.getInputStream();
         this.outputStream = clientSocket.getOutputStream();
@@ -64,6 +71,10 @@ public class serverWorker extends Thread {
         clientSocket.close();
     }
 
+    /**
+     * This removes the person from the topic
+     * @param tokens
+     */
     private void handleLeave(String[] tokens) {
         if (tokens.length > 1){
             String topic = tokens[1];
@@ -71,10 +82,19 @@ public class serverWorker extends Thread {
         }
     }
 
+    /**
+     * This allows for checking if a person is in the topic
+     * @param topic
+     * @return
+     */
     public boolean isMemberOfTopic(String topic){
         return topicSet.contains(topic);
     }
 
+    /**
+     * This adds a person to a topic
+     * @param tokens
+     */
     private void handleJoin(String[] tokens) {
         if (tokens.length > 1){
             String topic = tokens[1];
@@ -84,6 +104,12 @@ public class serverWorker extends Thread {
 
     //format: "msg" "login" body...
     //format: "msg" "#topic" body...
+
+    /**
+     * This creates the message
+     * @param tokens
+     * @throws IOException
+     */
     private void handleMessage(String[] tokens) throws IOException {
         String sendTo = tokens[1];
         String body = tokens[2];
@@ -110,6 +136,10 @@ public class serverWorker extends Thread {
         }
     }
 
+    /**
+     * This removes the person from the worker and being able to logoff
+     * @throws IOException
+     */
     private void handleLogoff() throws IOException {
         server.removeWorker(this);
         List<serverWorker> workerList = server.getWorkerList();
@@ -126,6 +156,12 @@ public class serverWorker extends Thread {
         return login;
     }
 
+    /**
+     * This allows for a person to login
+     * @param outputStream
+     * @param tokens
+     * @throws IOException
+     */
     private void handleLogin(OutputStream outputStream, String[] tokens) throws IOException {
         if(tokens.length == 3){
             String login = tokens[1];
