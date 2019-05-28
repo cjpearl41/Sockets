@@ -7,6 +7,9 @@ import java.net.Socket;
 import java.util.HashSet;
 import java.util.List;
 
+/**
+ * This class handles commands and forming messages
+ */
 public class serverWorker extends Thread {
 
     private final Socket clientSocket;
